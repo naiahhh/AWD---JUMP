@@ -1,33 +1,34 @@
-*{
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
-body{
+body {
     display: flex;
     justify-content: center;
     align-items: center;
     min-height: 100vh;
     flex-direction: column;
     background-color: linear-gradient(45deg, #ff93db, #91e595);
-
 }
 
 .letters {
-        perspective: 1000px;
+    perspective: 1000px;
+
+    .letter {
+        position: relative;
         overflow: hidden;
         display: inline-block;
         user-select: none;
         line-height: 0.8;
         font-size: 5rem;
 
-
         &.active {
             animation: jump 1s ease-in-out;
             transform-origin: bottom left;
-            
-             &::before {
+
+            &::before {
                 content: '';
                 position: absolute;
                 top: 50%;
@@ -41,28 +42,27 @@ body{
         }
     }
 }
-    
 
 @keyframes jump {
     0% {
         transform: translate(0, 0) rotate(180deg);
     }
     25% {
-        transform: scale(2) translate(0,-150px);
+        transform: scale(2) translate(0, 150px);
     }
     75% {
-        transform: scale(1,1) translate(0,200px);
+        transform: scale(1, 1) translate(-200px,);
     }
     100% {
         transform: translate(0, 0) rotate(360deg);
     }
+}
 
- @keyframes rainbowTrail {
+@keyframes rainbowTrail {
     0% {
         opacity: 1;
     }
     80% {
         opacity: 0;
     }
-}
 }
