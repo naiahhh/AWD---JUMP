@@ -15,9 +15,7 @@ body{
 }
 
 .letters {
-    perspective: 1000px;
-
-    .letter{
+        perspective: 1000px;
         overflow: hidden;
         display: inline-block;
         user-select: none;
